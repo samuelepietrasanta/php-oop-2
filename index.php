@@ -39,7 +39,7 @@ class Product {
     }
 
     public function bau(){
-        return 'bau';
+        return 'bau' ;
     }
 
    /*  public function isAvailable(){
@@ -62,8 +62,3 @@ $libro1 = new Product ("1","Il miglior libro mai stato scritto","24", "Mondadori
 echo $libro1->bau();
 
 ?>
-
-
-
-
-
