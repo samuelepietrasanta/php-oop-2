@@ -2,12 +2,13 @@
 
 
 //* CREO LA CLASSE
-class Products{
+class Product {
     protected $id;
     protected $description;
     protected $price;
     protected $seller;
     protected $howmany;
+
 
 //? CREO LA FUNZIONE CONSTRUCT
     protected function __construct($_id,$_description,$_price,$_seller,$_howmany){
@@ -17,26 +18,6 @@ class Products{
         $this->seller = $_seller;
         $this->howmany = $_howmany;
 
-    }
-
-
-//#SETTER
-
-    protected function set_id($id){
-        $this->id = $id;
-    }
-
-    protected function set_description($description){
-        $this->description = $description;
-    }
-    protected function set_price($price){
-        $this->price = $price;
-    }
-    protected function set_seller($seller){
-        $this->seller = $seller;
-    }
-    protected function set_howmany($howmany){
-        $this->howmany = $howmany;
     }
 
 //#GETTER
@@ -57,19 +38,32 @@ class Products{
         return $this->howmany;
     }
 
+    public function bau(){
+        return 'bau';
+    }
 
-    function isAvailable(){
+   /*  public function isAvailable(){
         if($this->howmany > 0){
             return true;
         }
         return false;
     }
 
+    public function isCheap(){
+        if($this->price < 10){
+            return true;
+        }
+        return false;
+    } */
+
+}
+
+$libro1 = new Product ("1","Il miglior libro mai stato scritto","24", "Mondadori", "175");
+echo $libro1->bau();
+
+?>
 
 
 
 
 
-
-    
-}?>
